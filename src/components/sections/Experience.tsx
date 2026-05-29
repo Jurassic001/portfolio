@@ -13,7 +13,6 @@ export default function Experience() {
     <Section
       id="experience"
       title="Experience"
-      subtitle="Leadership, projects, and professional roles"
     >
       {/* Leadership & Project Experience */}
       <div className="mb-16">

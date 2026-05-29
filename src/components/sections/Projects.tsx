@@ -9,7 +9,6 @@ export default function Projects() {
     <Section
       id="projects"
       title="Projects"
-      subtitle="Things I&rsquo;ve built and shipped"
     >
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {resumeData.projects.map((project) => (

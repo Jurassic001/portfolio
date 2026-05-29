@@ -8,8 +8,7 @@ export default function Footer() {
     >
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 sm:flex-row sm:justify-between sm:px-6">
         <p className="text-sm text-[var(--color-text-muted)]">
-          &copy; {new Date().getFullYear()} Max Haberer. Built with React &amp;
-          TypeScript.
+          &copy; {new Date().getFullYear()} Maxwell Haberer
         </p>
         <SocialLinks size={18} />
       </div>

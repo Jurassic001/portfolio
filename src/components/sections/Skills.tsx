@@ -8,7 +8,6 @@ export default function Skills() {
     <Section
       id="skills"
       title="Skills"
-      subtitle="Technologies, tools, and capabilities"
     >
       <div className="grid gap-8 md:grid-cols-3">
         {resumeData.skills.map((category) => (
