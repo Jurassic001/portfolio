@@ -173,7 +173,6 @@ const resumeData: ResumeData = {
         "4th place nationally",
         "Judge's Choice Award for autonomous flight",
       ],
-      featured: true,
     },
     {
       id: "helm",
@@ -183,7 +182,24 @@ const resumeData: ResumeData = {
       techStack: ["C++", "Python", "FFmpeg", "WSL2", "TCP", "JSON"],
       githubUrl: "https://github.com/Jurassic001/helm",
       outcomes: ["TAMUhack '26 Winner"],
-      featured: true,
+    },
+    {
+      id: "usbc-bench-supply",
+      name: "USB-C Bench Power Supply",
+      description:
+        "A compact, portable bench supply that replaces the usual AC-to-DC brick with a laptop USB-C charger and an off-the-shelf module wrapped in a custom 3D printed case. An HUSB238 PD board negotiates up to 20V fixed PDO over the CC lines and feeds a DSP5005 buck module, yielding an adjustable 0-18V CV/CC output at up to 5A. Sized around the USB PD standard 100W ceiling.",
+      techStack: [
+        "3D Printing & Design",
+        "Soldering",
+        "Multimeters",
+        "Standard Tools",
+        "Power Electronics",
+      ],
+      outcomes: [
+        "0-18V / 5A adjustable DC output",
+        "Runs off an existing laptop charger, no dedicated cables",
+        "Bench-validated at full 5A draw across the adjustable range",
+      ],
     },
     {
       id: "simple-ytdl",
@@ -196,7 +212,6 @@ const resumeData: ResumeData = {
         "Cross-platform releases distributed on GitHub",
         "Self-developed CI/CD workflows",
       ],
-      featured: false,
     },
   ],
 

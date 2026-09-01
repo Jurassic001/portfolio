@@ -38,7 +38,6 @@ export interface ProjectEntry {
   githubUrl?: string;
   liveUrl?: string;
   outcomes: string[];
-  featured: boolean;
   image?: string;
 }
 
