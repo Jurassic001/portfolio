@@ -39,5 +39,4 @@ Single-page React 19 + TypeScript portfolio built with Vite 6. No router — all
 - Function components only, `export default function ComponentName()`. No class components, no named exports for components.
 - `ui/` components accept a `className` prop for external overrides.
 - Custom CSS utilities: `.text-gradient` (brand→accent gradient), `.bg-glass` (translucent backdrop-blur card).
-- The `autoCV` submodule (`autoCV/cv.tex`) is the upstream source for resume content — keep `resume.ts` in sync with it.
 - Deployed on Vercel; `vercel.json` configures SPA rewrite rules and security headers.
