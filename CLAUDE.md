@@ -1,9 +1,5 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
-
-> See `@AGENTS.md` for the full architecture reference — it is the canonical guide and should be treated as equivalent to this file.
-
 ## Commands
 
 ```bash
