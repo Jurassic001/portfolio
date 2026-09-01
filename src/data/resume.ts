@@ -33,9 +33,23 @@ const resumeData: ResumeData = {
   },
 
   summary:
-    "Computer engineering student with hands-on experience in systems engineering, software development, aerial vehicles, and robotics. Experienced with design and implementation of integrated control systems and software, applying requirements analysis, verification, and validation processes. Passionate about aerospace innovation, control system modeling, and computer architecture.",
+    "Computer engineering student with hands-on experience in systems engineering, software development, and aerospace in large team environments. Experienced with design, implementation, and validation of integrated control systems and software. Passionate about aerospace, avionics, flight simulation, and computer architecture.",
 
   experience: [
+    {
+      id: "bell-flight-sim",
+      company: "Bell Helicopter",
+      role: "Flight Simulation Software Intern",
+      startDate: "2026",
+      endDate: "2026",
+      bullets: [
+        "Rewrote a legacy Java tool for managing flight tests into modern C++17, fixing long-standing bugs and end-user gripes",
+        "Architected new software with a focus on maintainability and extensibility while preserving backwards-compatibility",
+        "Worked alongside mentors and interns to engineer new features while adhering to team standards and best practices",
+      ],
+      tags: ["C++17", "Java", "Flight Simulation", "Software Architecture"],
+      category: "work",
+    },
     {
       id: "tamu-rocketry",
       company: "Texas A&M Sounding Rocketry Team",
@@ -43,9 +57,19 @@ const resumeData: ResumeData = {
       startDate: "2025",
       endDate: "Present",
       bullets: [
-        "Developed, tested, and deployed embedded systems for telemetry, onboard logic, and radar systems on high-powered rockets",
+        "Developed purpose-built rocket telemetry visualization software in Rust, enabling in-flight viewing, streaming, and analysis",
+        "Engineered embedded software on a multi-layer avionics stack for robust navigation and communication with ground stations",
+        "Validated avionics systems via ground and flight testing, ensuring compliance with safety, performance, and team standards",
+        "Designed and assembled avionics PCBs, including power distribution, sensor integration, and communication interfaces",
       ],
-      tags: ["Embedded Systems", "Telemetry", "Radar", "C", "STM32"],
+      tags: [
+        "Rust",
+        "Embedded C",
+        "Telemetry",
+        "STM32",
+        "Altium Designer",
+        "PCB Design",
+      ],
       category: "leadership",
     },
     {
@@ -55,11 +79,12 @@ const resumeData: ResumeData = {
       startDate: "2023",
       endDate: "2024",
       bullets: [
-        "Spearheaded software development enabling autonomous drone flight using timing, inertial-based, and visual-based tracking mechanisms",
-        "Developed, integrated and tested independent unmanned vehicle subsystems, including thermal detection & processing and electromagnet control firmware",
-        "Modeled rotor downwash using CFD analysis and component strength in Fusion 360 to determine optimal designs for 3D-printed mechanisms",
-        "Redefined system architecture, eliminating dependencies on 5 GHz WiFi and an external ground control station, improving vehicle performance in unpermissive RF environments",
-        "Conducted verification testing of drone systems in a recreated competition field, executing full mission tests that simulated competition conditions",
+        "Spearheaded software development enabling autonomous drone flight using inertial and visual-based tracking mechanisms",
+        "Integrated unmanned vehicle subsystems, including thermal image processing and electromagnet control firmware",
+        "Modeled rotor downwash using CFD and component strength to determine optimal design for 3D-printed mechanisms",
+        "Eliminated dependencies on 5 GHz WiFi and ground control, redefining performance in unpermissive RF environments",
+        "Verified drone systems in a recreated competition field, executing full mission tests that simulated competition conditions",
+        "Tracked metrics during verification to evaluate performance, identify failure points, and refine system implementation",
       ],
       tags: [
         "Python",
@@ -81,10 +106,9 @@ const resumeData: ResumeData = {
       endDate: "2026",
       bullets: [
         "Built a C++ backend integrating Presage SmartSpectra SDK for real-time physiological sensing via live camera input",
-        "Designed a Python GUI + WSL2 C++ pipeline with FFmpeg/TCP streaming and JSON messaging for low-latency data flow",
-        "Supported team execution by delegating tasks, managing source control, and contributing systems engineering plus frontend tweaks",
+        "Designed a Python GUI in Qt6 with a WSL2 C++ pipeline for FFmpeg/TCP streaming and JSON messaging",
       ],
-      tags: ["C++", "Python", "FFmpeg", "WSL2", "TCP", "Systems Engineering"],
+      tags: ["C++", "Python", "Qt6", "FFmpeg", "WSL2", "TCP"],
       link: "https://github.com/Jurassic001/helm",
       category: "leadership",
     },
@@ -95,8 +119,8 @@ const resumeData: ResumeData = {
       startDate: "2024",
       endDate: "2024",
       bullets: [
-        "Organized and led a team of Boy Scouts to restore a community garden at an elderly living facility, guiding them through problem-solving and project delivery",
-        "Planned project phases, coordinated resources, and managed timelines while communicating with facility staff and volunteers",
+        "Led a team of Scouts to restore a garden at an elderly living facility, steering through problem-solving and project delivery",
+        "Planned project phases, coordinated resources, and managed timelines while communicating with staff and volunteers",
       ],
       tags: ["Leadership", "Project Management"],
       category: "leadership",
@@ -183,7 +207,8 @@ const resumeData: ResumeData = {
       degree: "B.S.",
       field: "Computer Engineering (CPEN)",
       startDate: "Aug 2025",
-      endDate: "Present",
+      endDate: "May 2029",
+      gpa: "3.40",
       honors: [],
     },
     {
@@ -192,6 +217,7 @@ const resumeData: ResumeData = {
       degree: "High School Diploma",
       startDate: "Sep 2021",
       endDate: "May 2025",
+      gpa: "4.30",
       honors: [
         "Boy Scouts of America - Eagle Scout",
         "National Honors Society",
@@ -202,38 +228,42 @@ const resumeData: ResumeData = {
 
   skills: [
     {
-      name: "Programming & Software",
+      name: "Programming",
       skills: [
         "Python",
         "Rust",
         "Embedded C",
         "C++",
+        "Java",
+        "Git",
+        "Linux",
+        "Bash",
         "Docker",
-        "Git / GitHub",
-        "CubeIDE",
-        "VS Code",
+        "GitHub",
+        "Azure DevOps",
+        "CI/CD",
       ],
     },
     {
-      name: "Hardware & Equipment",
+      name: "Software",
       skills: [
-        "3D Printing",
-        "STM32 Microcontrollers",
+        "Altium Designer",
+        "Verilog",
+        "STM32Cube",
+        "Autodesk Fusion 360",
+        "Adobe Photoshop",
+        "Adobe Premiere Pro",
+      ],
+    },
+    {
+      name: "Equipment",
+      skills: [
+        "3D Printing & Design",
+        "Printed Circuit Boards",
+        "Microcontrollers",
         "Soldering",
         "Multimeters",
         "Standard Tools",
-      ],
-    },
-    {
-      name: "Engineering & Design",
-      skills: [
-        "Systems Engineering",
-        "CI/CD",
-        "DevOps",
-        "Autodesk Fusion 360",
-        "Adobe Photoshop",
-        "Adobe Illustrator",
-        "Adobe Premiere Pro",
       ],
     },
   ],

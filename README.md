@@ -1,6 +1,6 @@
 # Jurassic001.github.io
 
-My developer portfolio. Built with React 19, TypeScript, Vite 6, Tailwind CSS v4, and Framer Motion. Deployed on Vercel.
+My developer portfolio.
 
 ## Dev
 

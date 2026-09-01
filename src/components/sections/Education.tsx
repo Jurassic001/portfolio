@@ -24,6 +24,7 @@ export default function Education() {
                 </p>
                 <p className="mt-1 text-xs text-[var(--color-text-muted)]">
                   {edu.startDate} - {edu.endDate}
+                  {edu.gpa ? ` · GPA ${edu.gpa}` : ""}
                 </p>
               </div>
             </div>

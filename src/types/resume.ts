@@ -49,6 +49,7 @@ export interface EducationEntry {
   field?: string;
   startDate: string;
   endDate: string;
+  gpa: string;
   honors: string[];
 }
 
