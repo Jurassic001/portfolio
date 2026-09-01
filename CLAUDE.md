@@ -39,4 +39,4 @@ Single-page React 19 + TypeScript portfolio built with Vite 6. No router — all
 - Function components only, `export default function ComponentName()`. No class components, no named exports for components.
 - `ui/` components accept a `className` prop for external overrides.
 - Custom CSS utilities: `.text-gradient` (brand→accent gradient), `.bg-glass` (translucent backdrop-blur card).
-- Deployed on Vercel; `vercel.json` configures SPA rewrite rules and security headers.
+- Deployed on Cloudflare Workers; `wrangler.jsonc` configures static-asset serving and SPA fallback, and `public/_headers` sets security headers. `.node-version` pins the build image's Node version.

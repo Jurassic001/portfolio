@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://jurassic001.github.io/sitemap.xml
+Sitemap: https://mhaberer.com/sitemap.xml

@@ -26,3 +26,6 @@ npm-debug.log*
 
 # LLM Stuff
 .claude/**
+
+# Cloudflare Wrangler local state
+.wrangler/

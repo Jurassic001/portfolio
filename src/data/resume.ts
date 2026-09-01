@@ -14,7 +14,7 @@ const resumeData: ResumeData = {
     name: "Max Haberer",
     label: "Computer Engineering Student",
     email: "mhaberer25@gmail.com",
-    website: "https://jurassic001.github.io",
+    website: "https://mhaberer.com",
     location: "College Station, TX",
     image: "https://avatars.githubusercontent.com/u/119370602?v=4",
     avatarUrl: "/img/mh_headshot.jpg",

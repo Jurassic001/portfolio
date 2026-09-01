@@ -1,5 +1,3 @@
-import { Analytics } from "@vercel/analytics/react";
-import { SpeedInsights } from "@vercel/speed-insights/react";
 import { useEffect, useRef, useState } from "react";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
@@ -60,8 +58,6 @@ export default function App() {
       </main>
       <Footer />
       <Toast message="Background FX hidden for accessibility" visible={toastVisible} />
-      <Analytics />
-      <SpeedInsights />
     </div>
   );
 }
