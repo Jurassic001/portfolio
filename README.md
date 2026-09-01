@@ -1,6 +1,4 @@
-# Jurassic001.github.io
-
-My developer portfolio.
+My developer portfolio, written in React, hosted on Cloudflare
 
 ## Dev
 
