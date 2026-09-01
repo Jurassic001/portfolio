@@ -3,6 +3,7 @@ import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import ColorBends from './components/reactbits/ColorBends';
 import Toast from "./components/ui/Toast";
+import Privacy from "./components/pages/Privacy";
 import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
 import Education from "./components/sections/Education";
@@ -12,8 +13,14 @@ import Projects from "./components/sections/Projects";
 import Skills from "./components/sections/Skills";
 import { useTheme } from "./hooks/useTheme";
 
+/** Single static route besides the home page; served via the SPA fallback. */
+function isPrivacyRoute() {
+  return window.location.pathname.replace(/\/+$/, "") === "/privacy";
+}
+
 export default function App() {
   const { theme, toggleTheme } = useTheme();
+  const [showPrivacy] = useState(isPrivacyRoute);
   const [toastVisible, setToastVisible] = useState(false);
   const prevTheme = useRef(theme);
 
@@ -51,16 +58,22 @@ export default function App() {
         </div>
       )}
       <div className="pointer-events-none fixed inset-0 z-[-1] bg-overlay" />
-      <Navbar theme={theme} toggleTheme={toggleTheme} />
-      <main className="flex-1">
-        <Hero />
-        <About />
-        <Experience />
-        <Projects />
-        <Skills />
-        <Education />
-        <Contact />
-      </main>
+      {showPrivacy ? (
+        <Privacy theme={theme} toggleTheme={toggleTheme} />
+      ) : (
+        <>
+          <Navbar theme={theme} toggleTheme={toggleTheme} />
+          <main className="flex-1">
+            <Hero />
+            <About />
+            <Experience />
+            <Projects />
+            <Skills />
+            <Education />
+            <Contact />
+          </main>
+        </>
+      )}
       <Footer />
       <Toast message="Background FX hidden for accessibility" visible={toastVisible} />
     </div>

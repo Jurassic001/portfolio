@@ -7,9 +7,17 @@ export default function Footer() {
       role="contentinfo"
     >
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-4 px-4 sm:flex-row sm:justify-between sm:px-6">
-        <p className="text-sm text-[var(--color-text-muted)]">
-          &copy; {new Date().getFullYear()} Maxwell Haberer
-        </p>
+        <div className="flex flex-col items-center gap-1 sm:flex-row sm:gap-4">
+          <p className="text-sm text-[var(--color-text-muted)]">
+            &copy; {new Date().getFullYear()} Maxwell Haberer
+          </p>
+          <a
+            href="/privacy"
+            className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-brand-500"
+          >
+            Privacy Policy
+          </a>
+        </div>
         <SocialLinks size={18} />
       </div>
     </footer>
