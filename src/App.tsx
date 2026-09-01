@@ -20,11 +20,16 @@ export default function App() {
   useEffect(() => {
     if (prevTheme.current === "dark" && theme === "light") {
       setToastVisible(true);
-      const t = setTimeout(() => setToastVisible(false), 3000);
-      return () => clearTimeout(t);
     }
     prevTheme.current = theme;
   }, [theme]);
+
+  // Dismiss the toast on its own timer, independent of further theme changes
+  useEffect(() => {
+    if (!toastVisible) return;
+    const t = setTimeout(() => setToastVisible(false), 3000);
+    return () => clearTimeout(t);
+  }, [toastVisible]);
 
   return (
     <div className="flex min-h-screen flex-col">
