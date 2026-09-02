@@ -37,7 +37,7 @@ export default function Hero() {
           {/* CTA buttons */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start">
             <Button
-              href="https://jurassic001.github.io/autoCV/cv.pdf" // TODO: update resume PDF URL
+              href="https://jurassic001.github.io/autoCV/cv.pdf" 
               external
               variant="primary"
               size="lg"
