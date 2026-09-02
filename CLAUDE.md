@@ -20,7 +20,7 @@ Single-page React 19 + TypeScript portfolio built with Vite 6. No router — all
 - `layout/` — `Navbar`, `Footer`, `Section` (Section adds Framer Motion fade-in-up via `useInView`)
 - `ui/` — reusable primitives (`Button`, `Card`, `Badge`, `ThemeToggle`, `SocialLinks`)
 - `sections/` — page sections (`Hero`, `About`, `Experience`, `Projects`, `Skills`, `Education`, `Contact`)
-- `reactbits/` — third-party visual effect components (`Aurora`, `ColorBends`) using WebGL via `ogl` and `three`
+- `reactbits/` — third-party visual effect components (`ColorBends`) using WebGL via `three`
 
 **Styling:** Tailwind CSS v4 with `@theme` tokens defined in `src/index.css` (no `tailwind.config` file). Design tokens use `brand-*` (indigo) and `accent-*` (cyan). Dark mode is toggled via a `dark` class on `<html>` (managed by `src/hooks/useTheme.ts`, persisted to localStorage) — components use `dark:` variants for overrides.
 
