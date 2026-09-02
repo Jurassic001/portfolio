@@ -13,7 +13,7 @@ export default function Contact() {
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Let&rsquo;s Connect
         </h2>
-        <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-brand-500" />
+        <div className="mx-auto mt-4 h-px w-12 bg-brand-500" />
         <p className="mt-6 text-lg leading-relaxed text-[var(--color-text-secondary)]">
           I&rsquo;m always open to discussing new projects, engineering challenges,
           or opportunities. Feel free to reach out!

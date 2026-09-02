@@ -34,9 +34,9 @@ export default function Section({
     >
       <motion.div
         className="mx-auto w-full max-w-6xl"
-        initial={{ opacity: 0, y: 30 }}
-        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-        transition={{ duration: 0.5, ease: "easeOut" }}
+        initial={{ opacity: 0, y: 12 }}
+        animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 12 }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
       >
         {title && (
           <div className="mb-12 text-center lg:mb-16">
@@ -48,7 +48,7 @@ export default function Section({
                 {subtitle}
               </p>
             )}
-            <div className="mx-auto mt-4 h-1 w-16 rounded-full bg-brand-500" />
+            <div className="mx-auto mt-4 h-px w-12 bg-brand-500" />
           </div>
         )}
         {children}

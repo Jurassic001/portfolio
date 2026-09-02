@@ -30,12 +30,11 @@ const privacyPolicy: PrivacyPolicy = {
       id: "local-storage",
       title: "Data Stored in Your Browser",
       body: [
-        "The site remembers whether you prefer light or dark mode. That preference is saved in your browser's local storage under the key \"portfolio-theme\".",
+        "Nothing. This site does not write to local storage, session storage, cookies, or any other browser storage.",
       ],
       bullets: [
-        "It never leaves your device and is never sent to me or to anyone else.",
-        "It contains only the value \"light\" or \"dark\" — nothing identifying.",
-        "You can remove it at any time by clearing site data for this domain in your browser settings.",
+        "There are no saved preferences, no identifiers, and nothing to clear.",
+        "Your browser may cache static files (images, styles, scripts) as it does for any website; that cache is managed entirely by your browser and is never sent to me.",
       ],
     },
     {

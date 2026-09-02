@@ -18,11 +18,12 @@ Single-page React 19 + TypeScript portfolio built with Vite 6. No router — all
 
 **Component tiers** under `src/components/`:
 - `layout/` — `Navbar`, `Footer`, `Section` (Section adds Framer Motion fade-in-up via `useInView`)
-- `ui/` — reusable primitives (`Button`, `Card`, `Badge`, `ThemeToggle`, `SocialLinks`)
+- `ui/` — reusable primitives (`Button`, `Card`, `Badge`, `SocialLinks`)
 - `sections/` — page sections (`Hero`, `About`, `Experience`, `Projects`, `Skills`, `Education`, `Contact`)
-- `reactbits/` — third-party visual effect components (`ColorBends`) using WebGL via `three`
 
-**Styling:** Tailwind CSS v4 with `@theme` tokens defined in `src/index.css` (no `tailwind.config` file). Design tokens use `brand-*` (indigo) and `accent-*` (cyan). Dark mode is toggled via a `dark` class on `<html>` (managed by `src/hooks/useTheme.ts`, persisted to localStorage) — components use `dark:` variants for overrides.
+**Styling:** Tailwind CSS v4 with `@theme` tokens defined in `src/index.css` (no `tailwind.config` file). Design tokens use `brand-*` (deep oxblood, `#6e2c36` at 500) over warm cream surfaces (`--color-surface-light`/`--color-surface-card-light`). Semantic vars (`--color-text-primary`, `--color-border`, etc.) are defined once on `:root` and consumed via `text-[var(--color-text-secondary)]`-style classes.
+
+**The site is light-only.** There is no dark mode, no theme toggle, and no `dark:` variants — do not add them. Prefer flat fills and hairline borders over shadows and gradients; the visual target is formal and restrained.
 
 **Animations:** Framer Motion only — no CSS `@keyframes`. Use `useInView` with `once: true` for scroll-triggered animations.
 
@@ -34,5 +35,5 @@ Single-page React 19 + TypeScript portfolio built with Vite 6. No router — all
 
 - Function components only, `export default function ComponentName()`. No class components, no named exports for components.
 - `ui/` components accept a `className` prop for external overrides.
-- Custom CSS utilities: `.text-gradient` (brand→accent gradient), `.bg-glass` (translucent backdrop-blur card).
+- Custom CSS utility: `.bg-glass` (translucent backdrop-blur, used by the scrolled navbar dock).
 - Deployed on Cloudflare Workers; `wrangler.jsonc` configures static-asset serving and SPA fallback, and `public/_headers` sets security headers. `.node-version` pins the build image's Node version.

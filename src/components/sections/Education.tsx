@@ -11,7 +11,7 @@ export default function Education() {
         {resumeData.education.map((edu) => (
           <Card key={edu.id} className="flex flex-col gap-3">
             <div className="flex items-start gap-3">
-              <div className="rounded-lg bg-brand-500/10 p-2 text-brand-500">
+              <div className="rounded-md bg-brand-50 p-2 text-brand-500">
                 <GraduationCap size={22} />
               </div>
               <div>
@@ -29,7 +29,7 @@ export default function Education() {
               </div>
             </div>
             {edu.honors.length > 0 && (
-              <ul className="ml-2 space-y-1.5 border-l-2 border-brand-500/20 pl-4">
+              <ul className="ml-2 space-y-1.5 border-l border-[var(--color-border)] pl-4">
                 {edu.honors.map((honor) => (
                   <li
                     key={honor}

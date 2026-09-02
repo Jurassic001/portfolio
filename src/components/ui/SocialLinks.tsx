@@ -42,7 +42,7 @@ export default function SocialLinks({
           target={link.label !== "Email" ? "_blank" : undefined}
           rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
           aria-label={link.label}
-          className="inline-flex items-center gap-2 rounded-lg p-2 text-[var(--color-text-secondary)] transition-colors hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+          className="inline-flex items-center gap-2 rounded-md p-2 text-[var(--color-text-secondary)] transition-colors hover:text-brand-500 hover:bg-brand-50"
         >
           {link.icon}
           {showLabels && <span className="text-sm font-medium">{link.label}</span>}

@@ -25,7 +25,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.name} GitHub repository`}
-                    className="rounded-md p-1.5 text-[var(--color-text-muted)] transition-colors hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+                    className="rounded-md p-1.5 text-[var(--color-text-muted)] transition-colors hover:text-brand-500 hover:bg-brand-50"
                   >
                     <Github size={18} />
                   </a>
@@ -36,7 +36,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.name} live site`}
-                    className="rounded-md p-1.5 text-[var(--color-text-muted)] transition-colors hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+                    className="rounded-md p-1.5 text-[var(--color-text-muted)] transition-colors hover:text-brand-500 hover:bg-brand-50"
                   >
                     <ExternalLink size={18} />
                   </a>

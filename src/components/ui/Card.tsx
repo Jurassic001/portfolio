@@ -10,8 +10,8 @@ export default function Card({ children, className, hover = true }: CardProps) {
   return (
     <div
       className={cn(
-        "rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-card)] p-6 shadow-sm transition-all duration-300",
-        hover && "hover:shadow-md hover:-translate-y-1 hover:border-[var(--color-border-hover)]",
+        "rounded-lg border border-[var(--color-border)] bg-[var(--color-bg-card)] p-6 transition-colors duration-200",
+        hover && "hover:border-[var(--color-border-hover)]",
         className
       )}
     >

@@ -16,16 +16,16 @@ export default function Hero() {
         {/* Text content */}
         <motion.div
           className="flex-1 text-center lg:text-left"
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <p className="mb-3 text-sm font-semibold tracking-widest text-brand-500 uppercase">
             {basics.location}
           </p>
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
             Hi, I&rsquo;m{" "}
-            <span className="text-gradient">{basics.name}</span>
+            <span className="text-brand-500">{basics.name}</span>
           </h1>
           <p className="mt-4 text-xl text-[var(--color-text-secondary)] sm:text-2xl">
             {basics.label} @ Texas A&amp;M University
@@ -67,18 +67,17 @@ export default function Hero() {
         {/* Profile image */}
         <motion.div
           className="flex-shrink-0"
-          initial={{ opacity: 0, scale: 0.9 }}
+          initial={{ opacity: 0, scale: 0.97 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+          transition={{ duration: 0.4, delay: 0.1, ease: "easeOut" }}
         >
           <div className="relative">
-            <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-brand-500 to-accent-400 opacity-30 blur-lg" />
             <img
               src={basics.image}
               alt={`${basics.name} professional headshot`}
               width={280}
               height={280}
-              className="relative h-56 w-56 rounded-full border-4 border-[var(--color-bg-card)] object-cover object-top shadow-xl sm:h-72 sm:w-72"
+              className="relative h-56 w-56 rounded-full object-cover object-top ring-1 ring-[var(--color-border)] shadow-md sm:h-72 sm:w-72"
               loading="eager"
               fetchPriority="high"
             />
@@ -87,17 +86,13 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <motion.div
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
-        animate={{ y: [0, 8, 0] }}
-        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      >
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
         <ArrowDown
           size={20}
           className="text-[var(--color-text-muted)]"
           aria-hidden="true"
         />
-      </motion.div>
+      </div>
     </section>
   );
 }
