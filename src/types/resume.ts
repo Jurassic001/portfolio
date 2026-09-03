@@ -2,12 +2,16 @@
 
 export interface Basics {
   name: string;
-  label: string;
+  /** One-line positioning statement shown under the name, e.g. degree and school. */
+  headline: string;
+  /** Expected graduation, e.g. "May 2029". */
+  graduation: string;
   email: string;
-  phone?: string;
+  /** Canonical site URL; referenced by the privacy policy. */
   website: string;
-  location: string;
+  /** GitHub avatar, hotlinked so it stays current; overlaid on the headshot. */
   image: string;
+  /** Professional headshot. */
   avatarUrl: string;
   profiles: Profile[];
 }
@@ -18,58 +22,28 @@ export interface Profile {
   url: string;
 }
 
-export interface ExperienceEntry {
-  id: string;
-  company: string;
-  role: string;
-  startDate: string;
-  endDate: string;
-  bullets: string[];
-  tags: string[];
-  link?: string;
-  category: "leadership" | "work";
-}
-
 export interface ProjectEntry {
   id: string;
   name: string;
+  /** Organization or event the work was done for, if any. */
+  org?: string;
+  /** Role held, shown alongside the org. */
+  role?: string;
+  /** Human-readable date range, e.g. "2025 - Present". */
+  period?: string;
   description: string;
   techStack: string[];
   githubUrl?: string;
   liveUrl?: string;
   outcomes: string[];
-  image?: string;
-}
-
-export interface EducationEntry {
-  id: string;
-  institution: string;
-  degree: string;
-  field?: string;
-  startDate: string;
-  endDate: string;
-  gpa: string;
-  honors: string[];
-}
-
-export interface SkillCategory {
-  name: string;
-  skills: string[];
-}
-
-export interface Award {
-  title: string;
-  issuer: string;
-  date: string;
-  description?: string;
+  /** Optional card thumbnail, e.g. "/img/projects/helm.jpg". Omit to render a text-only card. */
+  thumbnail?: string;
+  /** Alt text for the thumbnail; falls back to the project name. */
+  thumbnailAlt?: string;
 }
 
 export interface ResumeData {
   basics: Basics;
   summary: string;
-  experience: ExperienceEntry[];
   projects: ProjectEntry[];
-  education: EducationEntry[];
-  skills: SkillCategory[];
-  awards: Award[];
 }

@@ -2,14 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { useEffect } from "react";
 import privacyPolicy from "../../data/privacy";
-import ThemeToggle from "../ui/ThemeToggle";
 
-interface PrivacyProps {
-  theme: "light" | "dark";
-  toggleTheme: () => void;
-}
-
-export default function Privacy({ theme, toggleTheme }: PrivacyProps) {
+export default function Privacy() {
   const { title, effectiveDate, intro, sections } = privacyPolicy;
 
   useEffect(() => {
@@ -27,31 +21,30 @@ export default function Privacy({ theme, toggleTheme }: PrivacyProps) {
         role="banner"
       >
         <nav
-          className="mx-auto flex max-w-3xl items-center justify-between px-4 py-3 sm:px-6"
+          className="mx-auto flex max-w-3xl items-center px-4 py-3 sm:px-6"
           aria-label="Main navigation"
         >
           <a
             href="/"
-            className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium text-[var(--color-text-secondary)] transition-colors hover:bg-brand-50 hover:text-brand-500 dark:hover:bg-brand-500/10"
+            className="inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium text-[var(--color-text-secondary)] transition-colors hover:bg-brand-50 hover:text-brand-500"
           >
             <ArrowLeft size={16} />
             Back to portfolio
           </a>
-          <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
         </nav>
       </header>
 
       <main className="flex-1 px-4 pt-28 pb-20 sm:px-6 lg:pb-24">
         <motion.article
           className="mx-auto w-full max-w-3xl"
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
         >
           <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
             {title}
           </h1>
-          <div className="mt-4 h-1 w-16 rounded-full bg-brand-500" />
+          <div className="mt-4 h-px w-12 bg-brand-500" />
           <p className="mt-4 text-sm text-[var(--color-text-muted)]">
             Effective {effectiveDate}
           </p>

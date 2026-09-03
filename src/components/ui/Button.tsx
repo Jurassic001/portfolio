@@ -11,16 +11,15 @@ interface ButtonProps {
   external?: boolean;
   onClick?: () => void;
   className?: string;
-  ariaLabel?: string;
 }
 
 const variantStyles: Record<Variant, string> = {
   primary:
-    "bg-brand-500 text-white hover:bg-brand-600 shadow-md hover:shadow-lg",
+    "bg-brand-500 text-white hover:bg-brand-600",
   secondary:
-    "border border-brand-500 text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10",
+    "border border-brand-500 text-brand-500 hover:bg-brand-50",
   ghost:
-    "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10",
+    "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50",
 };
 
 const sizeStyles: Record<Size, string> = {
@@ -37,10 +36,9 @@ export default function Button({
   external,
   onClick,
   className,
-  ariaLabel,
 }: ButtonProps) {
   const classes = cn(
-    "inline-flex items-center justify-center gap-2 rounded-lg font-medium transition-all duration-200 cursor-pointer",
+    "inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 cursor-pointer",
     "focus-visible:outline-2 focus-visible:outline-brand-500 focus-visible:outline-offset-2",
     variantStyles[variant],
     sizeStyles[size],
@@ -52,7 +50,6 @@ export default function Button({
       <a
         href={href}
         className={classes}
-        aria-label={ariaLabel}
         onClick={onClick}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
@@ -62,7 +59,7 @@ export default function Button({
   }
 
   return (
-    <button onClick={onClick} className={classes} aria-label={ariaLabel}>
+    <button onClick={onClick} className={classes}>
       {children}
     </button>
   );

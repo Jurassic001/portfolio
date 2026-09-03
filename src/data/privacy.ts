@@ -30,12 +30,11 @@ const privacyPolicy: PrivacyPolicy = {
       id: "local-storage",
       title: "Data Stored in Your Browser",
       body: [
-        "The site remembers whether you prefer light or dark mode. That preference is saved in your browser's local storage under the key \"portfolio-theme\".",
+        "Nothing. This site does not write to local storage, session storage, cookies, or any other browser storage.",
       ],
       bullets: [
-        "It never leaves your device and is never sent to me or to anyone else.",
-        "It contains only the value \"light\" or \"dark\" — nothing identifying.",
-        "You can remove it at any time by clearing site data for this domain in your browser settings.",
+        "There are no saved preferences, no identifiers, and nothing to clear.",
+        "Your browser may cache static files (images, styles, scripts) as it does for any website; that cache is managed entirely by your browser and is never sent to me.",
       ],
     },
     {
@@ -56,13 +55,17 @@ const privacyPolicy: PrivacyPolicy = {
       id: "third-parties",
       title: "Third-Party Services",
       body: [
-        "The site loads the Inter typeface from Google Fonts. When your browser requests those font files, Google receives your IP address and standard request headers. This is the only third-party resource the site loads.",
+        "The site loads two resources from third parties: the Inter typeface from Google Fonts, and my profile avatar from GitHub. When your browser requests those files, Google and GitHub respectively receive your IP address and standard request headers. Nothing else on the site is loaded from a third party.",
         "Pages also link out to profiles and projects on sites such as GitHub and LinkedIn. Following those links takes you to services I do not operate, each governed by its own privacy policy.",
       ],
       links: [
         {
           label: "Google Privacy Policy",
           url: "https://policies.google.com/privacy",
+        },
+        {
+          label: "GitHub Privacy Statement",
+          url: "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
         },
       ],
     },

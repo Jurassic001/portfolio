@@ -2,26 +2,16 @@ import { Menu, X } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useScrollSpy } from "../../hooks/useScrollSpy";
 import { cn } from "../../utils/cn";
-import ThemeToggle from "../ui/ThemeToggle";
-
-interface NavbarProps {
-  theme: "light" | "dark";
-  toggleTheme: () => void;
-}
 
 const NAV_ITEMS = [
   { id: "hero", label: "Home" },
-  { id: "about", label: "About" },
-  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "skills", label: "Skills" },
-  { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
 ] as const;
 
 const SCROLL_THRESHOLD = 50;
 
-export default function Navbar({ theme, toggleTheme }: NavbarProps) {
+export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(
     () => window.scrollY > SCROLL_THRESHOLD
@@ -63,7 +53,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
         className={cn(
           "pointer-events-auto transition-all duration-300 ease-out",
           scrolled
-            ? "w-fit mt-4 ml-auto mr-4 rounded-2xl border border-[var(--color-border)] shadow-lg bg-glass md:mx-auto"
+            ? "w-fit mt-4 ml-auto mr-4 rounded-xl border border-[var(--color-border)] bg-glass md:mx-auto"
             : "w-full bg-[var(--color-bg-card)] border-b border-[var(--color-border)]"
         )}
       >
@@ -72,7 +62,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
             "flex items-center transition-[gap,padding] duration-300 ease-out",
             scrolled
               ? "gap-1 px-2 py-2"
-              : "mx-auto max-w-6xl justify-between px-4 py-3 sm:px-6"
+              : "mx-auto max-w-6xl justify-between px-4 py-3 sm:px-6 md:justify-center"
           )}
           aria-label="Main navigation"
         >
@@ -83,10 +73,10 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                 <button
                   onClick={() => handleNavClick(item.id)}
                   className={cn(
-                    "rounded-lg px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap",
+                    "rounded-md px-3 py-2 text-sm font-medium transition-colors cursor-pointer whitespace-nowrap",
                     activeId === item.id
-                      ? "text-brand-500 bg-brand-50 dark:bg-brand-500/10"
-                      : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+                      ? "text-brand-500 bg-brand-50"
+                      : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50"
                   )}
                   aria-current={activeId === item.id ? "page" : undefined}
                 >
@@ -99,14 +89,13 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           {/* Spacer to push right-side controls when not scrolled */}
           {!scrolled && <div className="flex-1 md:hidden" />}
 
-          {/* Right side: theme toggle + mobile menu button */}
+          {/* Right side: mobile menu button */}
           <div className="flex items-center gap-1">
-            <ThemeToggle theme={theme} toggleTheme={toggleTheme} />
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle navigation menu"
               aria-expanded={mobileOpen}
-              className="rounded-lg p-2 text-[var(--color-text-secondary)] transition-colors hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10 md:hidden cursor-pointer"
+              className="rounded-md p-2 text-[var(--color-text-secondary)] transition-colors hover:text-brand-500 hover:bg-brand-50 md:hidden cursor-pointer"
             >
               {mobileOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -118,7 +107,7 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
           <div
             className={cn(
               "border-t border-[var(--color-border)] bg-[var(--color-bg-card)] md:hidden",
-              scrolled && "rounded-b-2xl"
+              scrolled && "rounded-b-xl"
             )}
           >
             <ul className="flex flex-col px-4 py-2" role="menu">
@@ -128,10 +117,10 @@ export default function Navbar({ theme, toggleTheme }: NavbarProps) {
                     role="menuitem"
                     onClick={() => handleNavClick(item.id)}
                     className={cn(
-                      "w-full rounded-lg px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
+                      "w-full rounded-md px-3 py-2.5 text-left text-sm font-medium transition-colors cursor-pointer",
                       activeId === item.id
-                        ? "text-brand-500 bg-brand-50 dark:bg-brand-500/10"
-                        : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+                        ? "text-brand-500 bg-brand-50"
+                        : "text-[var(--color-text-secondary)] hover:text-brand-500 hover:bg-brand-50"
                     )}
                   >
                     {item.label}

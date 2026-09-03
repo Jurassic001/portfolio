@@ -13,11 +13,34 @@ export default function Projects() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {resumeData.projects.map((project) => (
           <Card key={project.id} className="flex flex-col">
+            {/* Thumbnail */}
+            {project.thumbnail && (
+              <img
+                src={project.thumbnail}
+                alt={project.thumbnailAlt ?? project.name}
+                loading="lazy"
+                decoding="async"
+                className="mb-5 aspect-video w-full rounded-md border border-[var(--color-border)] object-cover"
+              />
+            )}
+
             {/* Header */}
             <div className="flex items-start justify-between gap-3">
-              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-                {project.name}
-              </h3>
+              <div>
+                <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                  {project.name}
+                </h3>
+                {(project.role || project.org) && (
+                  <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+                    {[project.role, project.org].filter(Boolean).join(" @ ")}
+                  </p>
+                )}
+                {project.period && (
+                  <p className="mt-0.5 text-sm text-[var(--color-text-muted)]">
+                    {project.period}
+                  </p>
+                )}
+              </div>
               <div className="flex shrink-0 gap-2">
                 {project.githubUrl && (
                   <a
@@ -25,7 +48,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.name} GitHub repository`}
-                    className="rounded-md p-1.5 text-[var(--color-text-muted)] transition-colors hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+                    className="rounded-md p-1.5 text-[var(--color-text-muted)] transition-colors hover:text-brand-500 hover:bg-brand-50"
                   >
                     <Github size={18} />
                   </a>
@@ -36,7 +59,7 @@ export default function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`${project.name} live site`}
-                    className="rounded-md p-1.5 text-[var(--color-text-muted)] transition-colors hover:text-brand-500 hover:bg-brand-50 dark:hover:bg-brand-500/10"
+                    className="rounded-md p-1.5 text-[var(--color-text-muted)] transition-colors hover:text-brand-500 hover:bg-brand-50"
                   >
                     <ExternalLink size={18} />
                   </a>
