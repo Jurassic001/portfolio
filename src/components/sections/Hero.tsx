@@ -23,6 +23,9 @@ export default function Hero() {
           <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
             {basics.name}
           </h1>
+          <p className="mt-3 text-lg font-medium text-brand-500">
+            {basics.headline} '{basics.graduation.split(" ").pop().slice(-2)}
+          </p>
           <p className="mt-5 max-w-2xl text-base leading-relaxed text-[var(--color-text-secondary)]">
             {summary}
           </p>

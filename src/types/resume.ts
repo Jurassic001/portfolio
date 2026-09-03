@@ -2,10 +2,16 @@
 
 export interface Basics {
   name: string;
+  /** One-line positioning statement shown under the name, e.g. degree and school. */
+  headline: string;
+  /** Expected graduation, e.g. "May 2029". */
+  graduation: string;
   email: string;
   /** Canonical site URL; referenced by the privacy policy. */
   website: string;
+  /** GitHub avatar, hotlinked so it stays current; overlaid on the headshot. */
   image: string;
+  /** Professional headshot. */
   avatarUrl: string;
   profiles: Profile[];
 }

@@ -55,13 +55,17 @@ const privacyPolicy: PrivacyPolicy = {
       id: "third-parties",
       title: "Third-Party Services",
       body: [
-        "The site loads the Inter typeface from Google Fonts. When your browser requests those font files, Google receives your IP address and standard request headers. This is the only third-party resource the site loads.",
+        "The site loads two resources from third parties: the Inter typeface from Google Fonts, and my profile avatar from GitHub. When your browser requests those files, Google and GitHub respectively receive your IP address and standard request headers. Nothing else on the site is loaded from a third party.",
         "Pages also link out to profiles and projects on sites such as GitHub and LinkedIn. Following those links takes you to services I do not operate, each governed by its own privacy policy.",
       ],
       links: [
         {
           label: "Google Privacy Policy",
           url: "https://policies.google.com/privacy",
+        },
+        {
+          label: "GitHub Privacy Statement",
+          url: "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
         },
       ],
     },

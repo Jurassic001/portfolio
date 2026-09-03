@@ -5,13 +5,13 @@ import type { ResumeData } from "../types/resume";
  * ║  SINGLE SOURCE OF TRUTH — Edit this file to update the   ║
  * ║  entire portfolio. All sections read from this object.    ║
  * ╚════════════════════════════════════════════════════════════╝
- *
- * Data extracted from resume LaTeX source (authoritative).
  */
 
 const resumeData: ResumeData = {
   basics: {
     name: "Max Haberer",
+    headline: "B.S. Computer Engineering, Texas A&M University",
+    graduation: "May 2029",
     email: "mhaberer25@gmail.com",
     website: "https://mhaberer.com",
     image: "https://avatars.githubusercontent.com/u/119370602?v=4",
@@ -41,7 +41,7 @@ const resumeData: ResumeData = {
       role: "Flight Simulation Software Intern",
       period: "2026",
       description:
-        "A ground-up rewrite of a legacy Java tool for managing flight tests, rebuilt in modern C++17 to clear out long-standing bugs and end-user gripes. The new architecture prioritizes maintainability and extensibility while preserving backwards-compatibility with the existing test workflow, and was built alongside mentors and fellow interns under established team standards.",
+        "A ground-up rewrite of a legacy Java tool for managing flight tests, rebuilt in modern C++17 to fix long-standing bugs and end-user pain points. The new architecture prioritizes maintainability and extensibility while preserving backwards-compatibility with the existing test workflow, and was built alongside mentors and fellow interns under established team standards.",
       techStack: [
         "C++17",
         "Qt6",
@@ -58,7 +58,7 @@ const resumeData: ResumeData = {
       role: "Avionics Engineer",
       period: "2025 - Present",
       description:
-        "Embedded flight software on a multi-layer avionics stack, handling navigation and ground-station communication aboard a student-built sounding rocket. The boards underneath it are custom too - power distribution, sensor integration, and communication interfaces - designed and assembled in-house, then validated through ground and flight testing against safety, performance, and team standards.",
+        "Embedded flight software on a multi-layer avionics stack, handling navigation and ground-station communication aboard a student-built sounding rocket. The boards underneath it are custom as well: power distribution, sensor integration, and communication interfaces designed and assembled in-house, then validated through ground and flight testing against safety, performance, and team standards.",
       techStack: [
         "Embedded C",
         "STM32Cube",
@@ -97,7 +97,7 @@ const resumeData: ResumeData = {
       role: "AVR Drone Lead",
       period: "2023 - 2024",
       description:
-        "Jetson Nano software, PCC/PX4 flight-controller firmware, and a high-level testing and data-collection GUI for an autonomous competition drone, covering the full software, electrical, and mechanical integration for Team Zephyrus (Highland Park Scots). The drone flies itself on inertial and visual tracking, with thermal image processing and electromagnet control firmware integrated across its subsystems, and carries no dependency on 5 GHz WiFi or ground control - redefining performance in unpermissive RF environments.",
+        "Jetson Nano software, PCC/PX4 flight-controller firmware, and a high-level testing and data-collection GUI for an autonomous competition drone, covering the full software, electrical, and mechanical integration for Highland Park High School's Team Zephyrus. The drone flies itself on inertial and visual tracking, with thermal image processing and electromagnet control firmware integrated across its subsystems, and carries no dependency on 5 GHz WiFi or a ground station, so it keeps flying in RF-restricted environments.",
       techStack: [
         "Python",
         "C++",
