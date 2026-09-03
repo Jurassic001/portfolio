@@ -2,7 +2,6 @@ import { useState } from "react";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import Privacy from "./components/pages/Privacy";
-import About from "./components/sections/About";
 import Contact from "./components/sections/Contact";
 import Education from "./components/sections/Education";
 import Experience from "./components/sections/Experience";
@@ -27,7 +26,6 @@ export default function App() {
           <Navbar />
           <main className="flex-1">
             <Hero />
-            <About />
             <Experience />
             <Projects />
             <Skills />
