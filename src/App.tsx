@@ -3,11 +3,8 @@ import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import Privacy from "./components/pages/Privacy";
 import Contact from "./components/sections/Contact";
-import Education from "./components/sections/Education";
-import Experience from "./components/sections/Experience";
 import Hero from "./components/sections/Hero";
 import Projects from "./components/sections/Projects";
-import Skills from "./components/sections/Skills";
 
 /** Single static route besides the home page; served via the SPA fallback. */
 function isPrivacyRoute() {
@@ -26,10 +23,7 @@ export default function App() {
           <Navbar />
           <main className="flex-1">
             <Hero />
-            <Experience />
             <Projects />
-            <Skills />
-            <Education />
             <Contact />
           </main>
         </>

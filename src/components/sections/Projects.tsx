@@ -15,9 +15,21 @@ export default function Projects() {
           <Card key={project.id} className="flex flex-col">
             {/* Header */}
             <div className="flex items-start justify-between gap-3">
-              <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
-                {project.name}
-              </h3>
+              <div>
+                <h3 className="text-xl font-bold text-[var(--color-text-primary)]">
+                  {project.name}
+                </h3>
+                {(project.role || project.org) && (
+                  <p className="mt-1 text-sm text-[var(--color-text-secondary)]">
+                    {[project.role, project.org].filter(Boolean).join(" @ ")}
+                  </p>
+                )}
+                {project.period && (
+                  <p className="mt-0.5 text-sm text-[var(--color-text-muted)]">
+                    {project.period}
+                  </p>
+                )}
+              </div>
               <div className="flex shrink-0 gap-2">
                 {project.githubUrl && (
                   <a

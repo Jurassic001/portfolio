@@ -39,8 +39,8 @@ export default function SocialLinks({
         <a
           key={link.label}
           href={link.href}
-          target={link.label !== "Email" ? "_blank" : undefined}
-          rel={link.label !== "Email" ? "noopener noreferrer" : undefined}
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label={link.label}
           className="inline-flex items-center gap-2 rounded-md p-2 text-[var(--color-text-secondary)] transition-colors hover:text-brand-500 hover:bg-brand-50"
         >

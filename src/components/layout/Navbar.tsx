@@ -5,10 +5,7 @@ import { cn } from "../../utils/cn";
 
 const NAV_ITEMS = [
   { id: "hero", label: "Home" },
-  { id: "experience", label: "Experience" },
   { id: "projects", label: "Projects" },
-  { id: "skills", label: "Skills" },
-  { id: "education", label: "Education" },
   { id: "contact", label: "Contact" },
 ] as const;
 

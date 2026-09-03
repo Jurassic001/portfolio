@@ -11,7 +11,6 @@ interface ButtonProps {
   external?: boolean;
   onClick?: () => void;
   className?: string;
-  ariaLabel?: string;
 }
 
 const variantStyles: Record<Variant, string> = {
@@ -37,7 +36,6 @@ export default function Button({
   external,
   onClick,
   className,
-  ariaLabel,
 }: ButtonProps) {
   const classes = cn(
     "inline-flex items-center justify-center gap-2 rounded-md font-medium transition-colors duration-200 cursor-pointer",
@@ -52,7 +50,6 @@ export default function Button({
       <a
         href={href}
         className={classes}
-        aria-label={ariaLabel}
         onClick={onClick}
         {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
       >
@@ -62,7 +59,7 @@ export default function Button({
   }
 
   return (
-    <button onClick={onClick} className={classes} aria-label={ariaLabel}>
+    <button onClick={onClick} className={classes}>
       {children}
     </button>
   );

@@ -19,7 +19,7 @@ Single-page React 19 + TypeScript portfolio built with Vite 6. No router — all
 **Component tiers** under `src/components/`:
 - `layout/` — `Navbar`, `Footer`, `Section` (Section adds Framer Motion fade-in-up via `useInView`)
 - `ui/` — reusable primitives (`Button`, `Card`, `Badge`, `SocialLinks`)
-- `sections/` — page sections (`Hero`, `Experience`, `Projects`, `Skills`, `Education`, `Contact`)
+- `sections/` — page sections (`Hero`, `Projects`, `Contact`)
 
 **Styling:** Tailwind CSS v4 with `@theme` tokens defined in `src/index.css` (no `tailwind.config` file). Design tokens use `brand-*` (deep oxblood, `#6e2c36` at 500) over warm cream surfaces (`--color-surface-light`/`--color-surface-card-light`). Semantic vars (`--color-text-primary`, `--color-border`, etc.) are defined once on `:root` and consumed via `text-[var(--color-text-secondary)]`-style classes.
 

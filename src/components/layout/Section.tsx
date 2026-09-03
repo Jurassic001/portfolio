@@ -5,19 +5,15 @@ import { cn } from "../../utils/cn";
 interface SectionProps {
   id: string;
   title?: string;
-  subtitle?: string;
   children: React.ReactNode;
   className?: string;
-  fullHeight?: boolean;
 }
 
 export default function Section({
   id,
   title,
-  subtitle,
   children,
   className,
-  fullHeight = false,
 }: SectionProps) {
   const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
@@ -27,8 +23,7 @@ export default function Section({
       id={id}
       ref={ref}
       className={cn(
-        "px-4 sm:px-6",
-        fullHeight ? "flex min-h-screen items-center" : "py-20 lg:py-24",
+        "px-4 py-20 sm:px-6 lg:py-24",
         className
       )}
     >
@@ -43,11 +38,6 @@ export default function Section({
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
               {title}
             </h2>
-            {subtitle && (
-              <p className="mt-3 text-lg text-[var(--color-text-secondary)]">
-                {subtitle}
-              </p>
-            )}
             <div className="mx-auto mt-4 h-px w-12 bg-brand-500" />
           </div>
         )}
