@@ -36,7 +36,10 @@ export interface ProjectEntry {
   githubUrl?: string;
   liveUrl?: string;
   outcomes: string[];
-  image?: string;
+  /** Optional card thumbnail, e.g. "/img/projects/helm.jpg". Omit to render a text-only card. */
+  thumbnail?: string;
+  /** Alt text for the thumbnail; falls back to the project name. */
+  thumbnailAlt?: string;
 }
 
 export interface ResumeData {

@@ -13,6 +13,17 @@ export default function Projects() {
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {resumeData.projects.map((project) => (
           <Card key={project.id} className="flex flex-col">
+            {/* Thumbnail */}
+            {project.thumbnail && (
+              <img
+                src={project.thumbnail}
+                alt={project.thumbnailAlt ?? project.name}
+                loading="lazy"
+                decoding="async"
+                className="mb-5 aspect-video w-full rounded-md border border-[var(--color-border)] object-cover"
+              />
+            )}
+
             {/* Header */}
             <div className="flex items-start justify-between gap-3">
               <div>

@@ -50,6 +50,7 @@ const resumeData: ResumeData = {
         "Azure DevOps",
       ],
       outcomes: [],
+	  thumbnail: "/img/bell-mv75.jpg",
     },
     {
       id: "srt-avionics",
@@ -67,6 +68,7 @@ const resumeData: ResumeData = {
         "UART",
       ],
       outcomes: [],
+	  thumbnail: "/img/hybrid-av.jpg",
     },
     {
       id: "srt-telemetry",
@@ -111,6 +113,7 @@ const resumeData: ResumeData = {
         "4th place nationally",
         "Judge's Choice Award for autonomous flight",
       ],
+	  thumbnail: "/img/bell-avr.jpg",
     },
     {
       id: "usbc-bench-supply",
@@ -125,6 +128,7 @@ const resumeData: ResumeData = {
         "Power Electronics",
       ],
       outcomes: [],
+	  thumbnail: "/img/power-supply.jpg"
     },
     {
       id: "simple-ytdl",
