@@ -36,7 +36,7 @@ const resumeData: ResumeData = {
   projects: [
     {
       id: "bell-flight-sim",
-      name: "Test Director",
+      name: "Engineer Operator Station",
       org: "Bell Helicopter",
       role: "Flight Simulation Software Intern",
       period: "2026",
@@ -71,8 +71,8 @@ const resumeData: ResumeData = {
 	  thumbnail: "/img/hybrid-av.jpg",
     },
     {
-      id: "srt-telemetry",
-      name: "Telemetry Visualization",
+      id: "vertex",
+      name: "VERTEX",
       org: "Texas A&M Sounding Rocketry Team",
       role: "Avionics Engineer",
       period: "2025 - Present",
@@ -80,6 +80,7 @@ const resumeData: ResumeData = {
         "Purpose-built rocket telemetry software written in Rust. It ingests the downlink from the avionics stack and renders vehicle state live for the ground station during flight, then replays the same data for analysis once the rocket is back on the ground.",
       techStack: ["Rust", "TypeScript", "OBS Studio", "Telemetry", "Data Visualization"],
       outcomes: [],
+	  thumbnail: "/img/vertex.png"
     },
     {
       id: "helm",
@@ -91,6 +92,7 @@ const resumeData: ResumeData = {
       techStack: ["C++", "Python", "Qt6", "FFmpeg", "WSL2", "TCP", "JSON"],
       githubUrl: "https://github.com/Jurassic001/helm",
       outcomes: ["TAMUhack '26 Winner"],
+	  thumbnail: "/img/helm.png",
     },
     {
       id: "avr-2024",
@@ -139,6 +141,7 @@ const resumeData: ResumeData = {
       techStack: ["Python", "yt-dlp", "FFmpeg"],
       githubUrl: "https://github.com/Jurassic001/simple_ytdl",
       outcomes: [],
+	  thumbnail: "/img/simple-ytdl.png"
     },
     {
       id: "eagle-scout-project",
@@ -149,7 +152,8 @@ const resumeData: ResumeData = {
       description:
         "The service project behind my Eagle Scout rank: restoring a neglected garden at an elderly living facility. I planned the project in phases, sourced the materials and tools, and led a team of Scouts through the build while keeping facility staff and volunteers aligned on timeline and scope.",
       techStack: ["Leadership", "Project Management", "Community Service"],
-      outcomes: ["Eagle Scout, the BSA's highest rank"],
+      outcomes: ["Eagle Scout"],
+	  thumbnail: "/img/eagle-proj.jpg"
     },
   ],
 };
