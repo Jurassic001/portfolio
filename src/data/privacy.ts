@@ -41,8 +41,7 @@ const privacyPolicy: PrivacyPolicy = {
       id: "hosting",
       title: "Hosting and Server Logs",
       body: [
-        "This site is hosted on Cloudflare Workers. Like any web host, Cloudflare processes the requests needed to deliver pages to you and may log technical details such as IP address, browser user agent, requested URL, and timestamp for security, abuse prevention, and reliability purposes.",
-        "That data is handled by Cloudflare under its own privacy policy. I do not have an analytics dashboard, do not review these logs to identify visitors, and do not combine them with anything else.",
+        "This site is hosted on Cloudflare Workers. Like any web host, Cloudflare processes the requests needed to deliver pages to you and may log technical details such as IP address, browser user agent, requested URL, and timestamp for security, abuse prevention, and reliability purposes. That data is handled by Cloudflare under its own privacy policy.",
       ],
       links: [
         {
@@ -73,7 +72,7 @@ const privacyPolicy: PrivacyPolicy = {
       id: "contact",
       title: "If You Email Me",
       body: [
-        `The contact section links to my email address (${email}) using a standard mailto link — it opens your own mail client and sends nothing until you do.`,
+        `The contact section links to my email address (${email}) using a standard mailto link, it opens your own mail client and sends nothing until you do.`,
         "If you choose to write to me, I receive your message and whatever you include in it through my email provider. I use it only to reply and keep correspondence the way anyone keeps their inbox. I do not add senders to any mailing list.",
       ],
     },
@@ -86,17 +85,10 @@ const privacyPolicy: PrivacyPolicy = {
       ],
     },
     {
-      id: "children",
-      title: "Children's Privacy",
-      body: [
-        "This site is not directed at children under 13, and I do not knowingly collect information from anyone.",
-      ],
-    },
-    {
       id: "changes",
       title: "Changes to This Policy",
       body: [
-        "If the site changes in a way that affects this policy — for example, if analytics or a contact form are ever added — I will update this page and revise the effective date above.",
+        "If the site changes in a way that affects this policy (i.e. if data collection or a contact form are ever added) I will update this page and revise the effective date above.",
       ],
     },
     {
